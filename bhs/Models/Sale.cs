@@ -7,29 +7,32 @@ using System.Threading.Tasks;
 
 namespace bhs.Models
 {
+    public enum SaleStatus
+    {
+        WaitingPayment,
+        PaymentApproved,
+        InTransit,
+        Delivered,
+        Canceled
+    }
+
     public class Sale
     {
-        public enum SaleStatus
-        {
-            WaitingPayment,
-            PaymentApproved,
-            InTransit,
-            Delivered,
-            Canceled
-        }
-
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public SaleStatus Status { get; set; }
 
         [Required]
-        public Saler Saler { get; set; }
+        public Seller Seller { get; set; }
 
         [Required]
-        public virtual ICollection<Vehicle> Vehicles { get; set; }
+        public int SellerCode { get; set; }
+
+        [Required]
+        public ICollection<Vehicle> Vehicles { get; set; }
         
     }
 }

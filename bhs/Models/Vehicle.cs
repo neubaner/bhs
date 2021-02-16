@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace bhs.Models
@@ -19,5 +20,8 @@ namespace bhs.Models
 
         [Required]
         public int YearOfManufacture { get; set; }
+
+        [JsonIgnore]
+        public virtual IList<Sale> Sales { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace bhs.Models
 {
-    public class Saler
+    public class Seller
     {
         [Key]
         public int Code { get; set; }
