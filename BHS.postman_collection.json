@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "6b8ec06e-3bd5-4df0-87c4-bdb838732e9f",
+		"name": "BHS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Vendas",
+			"item": [
+				{
+					"name": "Obter todas as vendas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:60893/sales",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "60893",
+							"path": [
+								"sales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter venda por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:60893/sales/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "60893",
+							"path": [
+								"sales",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar status da venda",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"status\": \"PaymentApproved\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:60893/sales",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "60893",
+							"path": [
+								"sales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar venda",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"SellerCode\": 1,\r\n    \"VehicleCodes\": [1]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:60893/sales",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "60893",
+							"path": [
+								"sales"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Vendedor",
+			"item": [
+				{
+					"name": "Criar Vendedor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Matheus\",\r\n    \"cpf\": \"96615573067\",\r\n    \"email\": \"matheus@bhs.com.br\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:60893/sellers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "60893",
+							"path": [
+								"sellers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Vendedor por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:60893/sellers/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "60893",
+							"path": [
+								"sellers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter todos os vendedores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:60893/sellers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "60893",
+							"path": [
+								"sellers"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Veículos",
+			"item": [
+				{
+					"name": "Obter todos veículos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:60893/vehicles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "60893",
+							"path": [
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter veículo por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:60893/vehicles/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "60893",
+							"path": [
+								"vehicles",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar veículo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"brand\": \"Volkswagen\",\r\n    \"model\": \"Volkswagen Gol 2015\",\r\n    \"yearOfManufacture\": 2015\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:60893/vehicles/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "60893",
+							"path": [
+								"vehicles",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
